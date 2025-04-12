@@ -1,0 +1,36 @@
+:root {
+  /* Color Variables */
+  --primary-color: #471f3a;
+  --secondary-color: #f4c38b;
+  --white-color: #ffffff;
+  --off-white-color: #f9f9f9;
+  --dark-text: #333333;
+  --medium-text: #666666;
+  
+  /* Font Variables */
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.5;
+  color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
