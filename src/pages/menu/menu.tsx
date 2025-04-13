@@ -116,6 +116,39 @@ const Menu = () => {
           <h1>Our Menu</h1>
           <p>Quality ingredients, expertly prepared</p>
         </div>
+        {/* Decorative elements */}
+        <div className="menu-hero-decorations">
+          <div className="menu-hero-icon icon-beans">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="#f4c38b">
+              <path d="M12,4C8.97,4 6.5,5.4 6.5,7C6.5,8.6 8.97,10 12,10C15.03,10 17.5,8.6 17.5,7C17.5,5.4 15.03,4 12,4M8.84,8.2C8.5,8.32 8.45,8.55 8.76,8.72C9.08,8.9 9.61,9 10.16,9C11.17,9 12,8.5 12,7.9C12,7.3 11.17,6.8 10.16,6.8C9.93,6.8 9.71,6.83 9.5,6.89C9.05,7.03 8.84,7.9 8.84,8.2M16.4,12.34L12.8,15.93V16H13.14L15.93,13.21V10.4C16.12,10.18 16.27,10 16.4,9.79C16.56,10.57 16.97,11.71 16.4,12.34M6.5,13C6.5,14.6 8.97,16 12,16C15.03,16 17.5,14.6 17.5,13C17.5,11.4 15.03,10 12,10C8.97,10 6.5,11.4 6.5,13M8.4,13.64C8.06,13.76 8.03,13.97 8.33,14.14C8.66,14.32 9.19,14.42 9.73,14.42C10.75,14.42 11.57,13.93 11.57,13.33C11.57,12.73 10.73,12.23 9.72,12.23C9.5,12.23 9.29,12.26 9.08,12.31C8.62,12.46 8.38,13.39 8.4,13.64M17.5,16C17.5,17.6 15.03,19 12,19C8.97,19 6.5,17.6 6.5,16C6.5,14.4 8.97,13 12,13C15.03,13 17.5,14.4 17.5,16Z" />
+            </svg>
+          </div>
+          <div className="menu-hero-icon icon-cup">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#471f3a">
+              <path d="M2,21V19H20V21H2M20,8V5H18V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20Z" />
+            </svg>
+          </div>
+          <div className="menu-hero-icon icon-steam">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#f4c38b">
+              <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" />
+            </svg>
+          </div>
+          <div className="menu-hero-icon icon-plant">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#471f3a">
+              <path d="M20,8C18.22,8 16.64,8.86 15.69,10.15C15.88,9.59 16,8.97 16,8.33C16,5.38 13.5,3 10.5,3C8.08,3 6,4.67 5.37,6.91C6.42,5.16 8.34,4 10.5,4C12.93,4 15,5.91 15.34,8.35C14.26,6.9 12.48,6 10.5,6C8.03,6 5.96,7.67 5.22,10H4.25C4.9,6.97 7.47,4.73 10.5,4.73C13.53,4.73 16.1,6.97 16.75,10H18.75C18.75,8.18 19.68,6.59 21.07,5.67C21.07,4.67 20.13,3.75 18.75,3.75C17.6,3.75 16.57,4.39 16.57,5.79C16.57,6.79 17.32,7.86 18.45,7.94C17.11,7.64 16,6.29 16,4.68C16,3 17.8,1.75 19.5,1.75C21.21,1.75 23,3 23,5.5C23,9.5 20,12 20,12V12M11.11,12.35C11.11,15.85 8.93,17.5 6.33,17.5C3.72,17.5 1.5,15.85 1.5,12.35C1.5,8.85 3.67,9.35 6.28,9.35C8.88,9.35 11.11,8.85 11.11,12.35M9.61,11.85C9.61,10.3 8.9,10.85 6.3,10.85C3.69,10.85 3,10.3 3,11.85C3,13.4 3.7,16 6.3,16C8.9,16 9.61,13.4 9.61,11.85Z" />
+            </svg>
+          </div>
+          <div className="menu-hero-icon icon-heart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#f4c38b">
+              <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+            </svg>
+          </div>
+          <div className="menu-hero-icon icon-croissant">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#471f3a">
+              <path d="M22,19L19,17L22,15V19M15,15L19,9L22,13L18,16L15,15M5,17L2,19V15L5,17M9,15L6,16L2,13L5,9L9,15M14,6L18,8L13,15H11L6,8L10,6H14Z" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       <section className="menu-section">
@@ -159,49 +192,6 @@ const Menu = () => {
                   </button>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="menu-info">
-        <div className="container">
-          <div className="menu-info-grid">
-            <div className="menu-info-card">
-              <h3>Dietary Preferences</h3>
-              <p>We're happy to accommodate dietary restrictions and preferences. Many of our items can be made vegetarian or vegan upon request. Please inform your server of any allergies or restrictions.</p>
-            </div>
-            <div className="menu-info-card">
-              <h3>Locally Sourced</h3>
-              <p>We work with local farmers and suppliers to bring you the freshest, highest quality ingredients. Our coffee beans are ethically sourced and roasted in small batches for optimal flavor.</p>
-            </div>
-            <div className="menu-info-card">
-              <h3>Made Fresh Daily</h3>
-              <p>All our food is prepared fresh daily. We pride ourselves on quality ingredients and homemade recipes that have been perfected over the years.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="specials-section">
-        <div className="container">
-          <h2 className="section-title">Weekly Specials</h2>
-          <div className="specials-card">
-            <div className="specials-content">
-              <h3>Current Special: Pumpkin Spice Season</h3>
-              <p className="special-description">Our signature fall drink with real pumpkin, espresso, steamed milk, and warm spices. Available for a limited time!</p>
-              <div className="special-price">$5.95</div>
-              <button 
-                className="order-now-btn specials-order-btn btn-animate"
-                onClick={() => handleOrder("Pumpkin Spice Latte", "$5.95")}
-              >
-                <span className="btn-text">Order Now</span>
-                <span className="btn-icon special-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
-                  </svg>
-                </span>
-              </button>
             </div>
           </div>
         </div>

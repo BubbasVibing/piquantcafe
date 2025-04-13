@@ -1,32 +1,82 @@
-/* About Hero Section */
+/* About Page Font */
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+/* About Hero Section - styled like menu hero */
 .about-hero {
-  height: 50vh;
-  min-height: 300px;
-  background: linear-gradient(rgba(71, 31, 58, 0.8), rgba(71, 31, 58, 0.8)), url('../../assets/about-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+  height: 40vh;
+  min-height: 250px;
+  background-color: #f8e8ed;
+  color: #471f3a;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/coffee-beans-pattern.svg');
+  background-size: 600px;
+  opacity: 0.03;
+  z-index: 1;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  background: linear-gradient(135deg, transparent 60%, rgba(244, 195, 139, 0.1) 100%);
+  z-index: 1;
 }
 
 .about-hero-content {
   max-width: 800px;
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .about-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 15px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  color: #471f3a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .about-hero-content p {
   font-size: 1.5rem;
-  opacity: 0.9;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: #784e6a;
+}
+
+.about-hero-content::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #f4c38b;
+  border-radius: 2px;
 }
 
 /* Journey Section */
@@ -52,7 +102,7 @@
   font-size: 2.5rem;
   margin-bottom: 30px;
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .journey-text .section-title::after {
@@ -96,7 +146,7 @@
   font-size: 2.5rem;
   margin-bottom: 60px;
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .values-section .section-title::after {
@@ -145,7 +195,7 @@
   font-size: 1.5rem;
   color: #471f3a;
   margin-bottom: 15px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .value-card p {
@@ -165,7 +215,7 @@
   font-size: 2.5rem;
   margin-bottom: 60px;
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .team-section .section-title::after {
@@ -213,7 +263,7 @@
   font-size: 1.5rem;
   color: #471f3a;
   margin-bottom: 5px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .team-role {
@@ -233,71 +283,146 @@
 /* Testimonial Section */
 .about-testimonials {
   padding: 100px 0;
-  background-color: #471f3a;
-  color: #ffffff;
+  background-color: #faf6f3;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-testimonials .section-title {
-  color: #ffffff;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 50px;
-  position: relative;
-  font-family: 'Playfair Display', serif;
+  color: #471f3a;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.about-testimonials .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
+.testimonials-divider {
+  width: 80px;
   height: 3px;
   background-color: #f4c38b;
+  margin: 0 auto 3rem;
+  position: relative;
 }
 
-.testimonial-carousel {
-  max-width: 800px;
-  margin: 0 auto;
+.testimonials-divider::before,
+.testimonials-divider::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f4c38b;
+  top: -2.5px;
+}
+
+.testimonials-divider::before {
+  left: -10px;
+}
+
+.testimonials-divider::after {
+  right: -10px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .testimonial-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 40px;
-  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(71, 31, 58, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.testimonial-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.testimonial-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.testimonial-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(71, 31, 58, 0.12);
+}
+
+.quote-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  opacity: 0.8;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .quote-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .testimonial-text {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
   position: relative;
+  z-index: 1;
 }
 
-.testimonial-text::before,
-.testimonial-text::after {
-  content: '"';
-  color: #f4c38b;
-  font-size: 2.5rem;
-  position: absolute;
+.testimonial-author-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.testimonial-text::before {
-  left: -20px;
-  top: -10px;
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 2px solid #f4c38b;
 }
 
-.testimonial-text::after {
-  right: -20px;
-  bottom: -30px;
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-author {
-  color: #f4c38b;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-style: italic;
+  font-size: 1rem;
+  color: #471f3a;
+  margin: 0;
+}
+
+.testimonial-role {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0.25rem 0 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* CTA Section */
@@ -311,7 +436,7 @@
   font-size: 3rem;
   margin-bottom: 20px;
   color: #471f3a;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .cta-text {
@@ -357,6 +482,110 @@
 .btn-secondary:hover {
   background-color: #471f3a;
   color: #ffffff;
+}
+
+/* About Hero Decorations */
+.about-hero-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-hero-icon {
+  position: absolute;
+  opacity: 0.85;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.icon-beans {
+  top: 10%;
+  right: 8%;
+  animation: rotateSlowly 20s linear infinite;
+}
+
+.icon-cup {
+  bottom: 15%;
+  left: 10%;
+  animation: bounce 6s ease-in-out infinite;
+}
+
+.icon-steam {
+  top: 45%;
+  left: 12%;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.icon-plant {
+  bottom: 15%;
+  right: 10%;
+  animation: sway 8s ease-in-out infinite;
+}
+
+.icon-heart {
+  top: 35%;
+  right: 15%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.icon-croissant {
+  top: 60%;
+  left: 7%;
+  animation: sway 9s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateSlowly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-5px);
+  }
 }
 
 /* Responsive Styles */
@@ -413,5 +642,9 @@
   
   .cta-text {
     font-size: 1rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }

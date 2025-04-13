@@ -2,6 +2,7 @@
   background-color: #471f3a;
   color: #ffffff;
   padding: 60px 0 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
@@ -23,6 +24,7 @@
   position: relative;
   color: #f4c38b;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-heading::after {

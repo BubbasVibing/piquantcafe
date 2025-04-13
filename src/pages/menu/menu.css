@@ -1,33 +1,82 @@
+/* Menu Page Font */
+.menu-page {
+  font-family: var(--menu-font);
+  color: #333333;
+}
+
 /* Menu Hero Section */
 .menu-hero {
-  height: 50vh;
-  min-height: 300px;
-  background: linear-gradient(rgba(71, 31, 58, 0.8), rgba(71, 31, 58, 0.8)), url('../../assets/menu-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+  height: 40vh;
+  min-height: 250px;
+  background-color: #f8e8ed;
+  color: #471f3a;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/coffee-beans-pattern.svg');
+  background-size: 600px;
+  opacity: 0.03;
+  z-index: 1;
+}
+
+.menu-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  background: linear-gradient(135deg, transparent 60%, rgba(244, 195, 139, 0.1) 100%);
+  z-index: 1;
 }
 
 .menu-hero-content {
   max-width: 800px;
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .menu-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 15px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: var(--menu-font);
+  color: #471f3a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .menu-hero-content p {
   font-size: 1.5rem;
-  opacity: 0.9;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: #784e6a;
+}
+
+.menu-hero-content::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #f4c38b;
+  border-radius: 2px;
 }
 
 /* Menu Navigation */
@@ -54,6 +103,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 30px;
+  font-family: var(--menu-font);
 }
 
 .menu-nav-item:hover {
@@ -79,7 +129,8 @@
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--menu-font);
+  font-weight: 600;
 }
 
 .menu-category-title::after {
@@ -152,14 +203,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
 .menu-item:hover .menu-item-image::after {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .menu-item-header {
@@ -174,6 +225,7 @@
   color: #471f3a;
   margin: 0;
   font-weight: 600;
+  font-family: var(--menu-font);
 }
 
 .menu-item-price {
@@ -186,11 +238,13 @@
 }
 
 .menu-item-description {
-  color: var(--color-text-light);
+  color: #666666;
   margin: 0.5rem 0 1.25rem;
   font-size: 0.95rem;
   line-height: 1.6;
   flex-grow: 1;
+  font-family: var(--menu-font);
+  font-weight: 400;
 }
 
 .order-now-btn {
@@ -204,6 +258,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .order-now-btn:hover {
@@ -214,8 +272,10 @@
 
 .menu-order-btn {
   width: 100%;
-  display: block;
   margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  padding-right: 30px; /* Make space for the icon */
 }
 
 .specials-order-btn {
@@ -279,7 +339,7 @@
   font-size: 1.6rem;
   color: #471f3a;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .menu-info-card p {
@@ -299,7 +359,7 @@
   margin-bottom: 40px;
   text-align: center;
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
 }
 
@@ -343,7 +403,7 @@
   font-size: 2.2rem;
   color: #f4c38b;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -373,6 +433,11 @@
   .menu-items {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  
+  .menu-hero {
+    height: 35vh;
+    min-height: 200px;
   }
   
   .menu-hero-content h1 {
@@ -424,5 +489,145 @@
   
   .menu-item:hover .menu-item-image {
     transform: translateY(-10px) scale(1.03);
+  }
+}
+
+/* Button text and icon alignment */
+.btn-text {
+  color: #471f3a;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+
+.btn-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn-animate:hover .btn-text {
+  transform: translateX(-5px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .btn-icon {
+    right: 15px;
+  }
+  
+  .menu-order-btn {
+    padding-right: 40px;
+  }
+}
+
+/* Menu Hero Decorations */
+.menu-hero-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.menu-hero-icon {
+  position: absolute;
+  opacity: 0.85;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.icon-beans {
+  top: 10%;
+  right: 8%;
+  animation: rotateSlowly 20s linear infinite;
+}
+
+.icon-cup {
+  bottom: 15%;
+  left: 10%;
+  animation: bounce 6s ease-in-out infinite;
+}
+
+.icon-steam {
+  top: 45%;
+  left: 12%;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.icon-plant {
+  bottom: 15%;
+  right: 10%;
+  animation: sway 8s ease-in-out infinite;
+}
+
+.icon-heart {
+  top: 35%;
+  right: 15%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.icon-croissant {
+  top: 60%;
+  left: 7%;
+  animation: sway 9s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateSlowly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-5px);
   }
 }
