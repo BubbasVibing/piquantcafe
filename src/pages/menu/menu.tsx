@@ -27,8 +27,13 @@ const Menu = () => {
 
   // Default images for category types
   const getCategoryImage = (category: string) => {
-    const drinkCategories = ['coffee', 'specialty', 'cold', 'food'];
-    return drinkCategories.includes(category) && category !== 'food' ? coffeeImage : foodImage;
+    const drinkCategories = ['coffee', 'specialty', 'cold'];
+    
+    if (drinkCategories.includes(category)) {
+      return coffeeImage;
+    } else {
+      return foodImage;
+    }
   };
 
   const menuCategories = [
@@ -134,7 +139,7 @@ const Menu = () => {
               {menuItems[activeCategory].map((item, index) => (
                 <div className="menu-item" key={index}>
                   <div className="menu-item-image">
-                    <img src={item.image} alt={item.name} />
+                    <img src={item.image || coffeeImage} alt={item.name} />
                   </div>
                   <div className="menu-item-header">
                     <h3 className="menu-item-name">{item.name}</h3>
@@ -142,10 +147,15 @@ const Menu = () => {
                   </div>
                   <p className="menu-item-description">{item.description}</p>
                   <button 
-                    className="order-now-btn menu-order-btn"
+                    className="order-now-btn menu-order-btn btn-animate"
                     onClick={() => handleOrder(item.name, item.price)}
                   >
-                    Order Now
+                    <span className="btn-text">Order Now</span>
+                    <span className="btn-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                      </svg>
+                    </span>
                   </button>
                 </div>
               ))}
@@ -182,10 +192,15 @@ const Menu = () => {
               <p className="special-description">Our signature fall drink with real pumpkin, espresso, steamed milk, and warm spices. Available for a limited time!</p>
               <div className="special-price">$5.95</div>
               <button 
-                className="order-now-btn specials-order-btn"
+                className="order-now-btn specials-order-btn btn-animate"
                 onClick={() => handleOrder("Pumpkin Spice Latte", "$5.95")}
               >
-                Order Now
+                <span className="btn-text">Order Now</span>
+                <span className="btn-icon special-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
