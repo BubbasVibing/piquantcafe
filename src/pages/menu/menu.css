@@ -96,14 +96,14 @@
 .menu-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 55px 25px;
+  gap: 30px;
   margin-top: 30px;
 }
 
 .menu-item {
   background-color: var(--color-white);
   border-radius: 10px;
-  padding: 1.75rem;
+  padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border-left: 3px solid transparent;
@@ -112,12 +112,10 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
-  margin-top: 60px;
-  padding-top: 160px;
 }
 
 .menu-item:hover {
-  transform: translateY(0);
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-left: 3px solid #f4c38b;
 }
@@ -127,20 +125,13 @@
   height: 180px;
   overflow: hidden;
   border-radius: 8px;
-  position: absolute;
-  top: -40px;
-  left: 15px;
-  right: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(0);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  z-index: 2;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .menu-item:hover .menu-item-image {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-  z-index: 3;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item-image img {
@@ -151,7 +142,7 @@
 }
 
 .menu-item:hover .menu-item-image img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .menu-item-image::after {
@@ -161,30 +152,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
-  opacity: 0.6;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .menu-item:hover .menu-item-image::after {
-  opacity: 0.3;
-}
-
-.menu-item-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0px solid #f4c38b;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover .menu-item-image::before {
-  border-width: 3px;
   opacity: 1;
 }
 
@@ -398,7 +372,7 @@
 @media (max-width: 768px) {
   .menu-items {
     grid-template-columns: 1fr;
-    gap: 65px 25px;
+    gap: 30px;
   }
   
   .menu-hero-content h1 {
@@ -421,13 +395,8 @@
     font-size: 1.8rem;
   }
   
-  .menu-item {
-    padding-top: 140px;
-  }
-  
   .menu-item-image {
     height: 160px;
-    top: -35px;
   }
 }
 

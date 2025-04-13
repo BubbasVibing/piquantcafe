@@ -1,14 +1,13 @@
 .navbar {
-  background: transparent;
+  background: #471f3a;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -18,35 +17,15 @@
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
-  margin: 20px auto;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  height: 60px;
-  border: 1px solid rgba(244, 195, 139, 0.2);
 }
 
 .navbar-logo {
-  color: #471f3a;
-  font-size: 1.5rem;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-logo::after {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: #f4c38b;
-  border-radius: 50%;
-  margin-left: 10px;
+  font-family: 'Playfair Display', serif;
 }
 
 .menu-icon {
@@ -56,8 +35,8 @@
 
 .menu-icon-bar {
   width: 25px;
-  height: 2px;
-  background: #471f3a;
+  height: 3px;
+  background: #ffffff;
   margin: 5px 0;
   transition: 0.4s;
 }
@@ -84,43 +63,38 @@
 }
 
 .nav-item {
-  height: 60px;
-  padding: 0;
+  height: 80px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
 }
 
 .nav-link {
-  color: #471f3a;
+  color: #ffffff;
   display: flex;
   align-items: center;
   text-decoration: none;
   height: 100%;
-  padding: 0 18px;
-  font-size: 0.95rem;
+  padding: 0 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
-  font-weight: 500;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #f4c38b;
+  background: #f4c38b;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-  width: 30px;
-}
-
-.nav-link:hover {
-  color: #471f3a;
+  width: 70%;
 }
 
 .order-now-item {
@@ -128,34 +102,31 @@
 }
 
 .order-now-btn {
-  background-color: rgba(244, 195, 139, 0.15) !important;
+  background-color: #f4c38b !important;
   color: #471f3a !important;
-  font-weight: 500;
-  padding: 8px 20px;
+  font-weight: 600;
+  padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #f4c38b;
-  position: relative;
-  font-size: 0.95rem;
+  border: 2px solid #f4c38b;
 }
 
 .order-now-btn:hover {
-  background-color: #f4c38b !important;
+  background-color: #ffffff !important;
   color: #471f3a !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(244, 195, 139, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
 }
 
 /* Mobile responsive */
 @media screen and (max-width: 960px) {
   .navbar-container {
     padding: 0 16px;
-    margin: 15px;
-    border-radius: 15px;
   }
 
   .menu-icon {
@@ -166,55 +137,48 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 90vh;
     position: absolute;
-    top: 90px;
-    left: 5%;
-    right: 5%;
+    top: 80px;
+    left: -100%;
     opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-    border: 1px solid rgba(244, 195, 139, 0.2);
+    transition: all 0.5s ease;
+    background: #471f3a;
   }
 
   .nav-menu.active {
+    left: 0;
     opacity: 1;
-    pointer-events: all;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .nav-item {
-    height: 50px;
+    height: 60px;
     width: 100%;
     padding: 0;
   }
 
   .order-now-item {
-    margin: 10px 0 0 0;
+    margin: 20px 0;
     height: auto;
   }
 
   .order-now-btn {
     margin: 0 auto;
-    padding: 12px 20px;
-    width: 80%;
+    padding: 12px 30px;
+    width: 60%;
   }
 
   .nav-link {
     text-align: center;
     width: 100%;
     display: table;
-    padding: 1rem 0;
-    font-size: 1.1rem;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
   }
-  
+
   .nav-link::after {
-    bottom: 10px;
+    bottom: 15px;
   }
 }
