@@ -2,11 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
 
-// Import placeholder images (you can replace these with actual event images later)
-import chessImage from '../../assets/coffee-image.jpg'; // Placeholder - replace with chess event image
-import soccerImage from '../../assets/food-image.jpg';  // Placeholder - replace with soccer event image
-import quizzoImage from '../../assets/cafe-image.jpg';  // Placeholder - replace with quizzo event image
-
 const Events = () => {
   // State for event filtering
   const [activeFilter, setActiveFilter] = useState('all');
@@ -20,36 +15,30 @@ const Events = () => {
   const featuredEvents = [
     {
       id: 'f1',
-      title: "Championship Chess Tournament",
-      date: "Saturday, June 15, 2023",
-      time: "2:00 PM - 6:00 PM",
-      description: "Join us for our monthly chess tournament! Players of all skill levels welcome. Prizes for winners and coffee specials for all participants.",
-      image: chessImage,
+      title: "Chess Night",
+      date: "TBD",
+      time: "Monthly Event",
+      description: "Join us for a relaxed chess meetup monthly—open to all levels. Bring a friend or play with someone new. Coffee specials for all participants.",
       category: "chess",
-      price: "$10.00",
-      ticketsLeft: 12
+      price: "$10.00"
     },
     {
       id: 'f2',
-      title: "Soccer Finals Viewing Party",
-      date: "Sunday, June 18, 2023",
-      time: "3:30 PM - 6:30 PM",
-      description: "Watch the championship match on our big screen with fellow soccer enthusiasts! Special menu featuring international dishes and exclusive drink deals.",
-      image: soccerImage,
+      title: "Soccer Match Viewing",
+      date: "TBD",
+      time: "Match Time",
+      description: "Catch live soccer games on our screens with specialty drinks and café snacks during match time at discounted price. $5 cover charge includes access to the viewing.",
       category: "soccer",
-      price: "$8.00",
-      ticketsLeft: 15
+      price: "$5.00"
     },
     {
       id: 'f3',
-      title: "Trivia Night Championship",
-      date: "Friday, June 23, 2023",
-      time: "7:00 PM - 10:00 PM",
-      description: "Our biggest trivia event of the year! Teams compete for the grand prize and bragging rights. Food and drink specials all night long.",
-      image: quizzoImage,
-      category: "quizzo",
-      price: "$5.00",
-      ticketsLeft: 20
+      title: "Art & Sip",
+      date: "TBD",
+      time: "Evening Event",
+      description: "Enjoy a creative break with simple art activities, your favorite Piquant specialty drinks, and a charcuterie board. Ticket includes art supply, one specialty drink, seating, and set up.",
+      category: "art",
+      price: "$20.00"
     }
   ];
 
@@ -57,82 +46,38 @@ const Events = () => {
   const events = [
     {
       id: 1,
-      title: "Weekly Chess Club",
-      date: "Every Tuesday",
-      formattedDate: "2023-06-06", // Example Tuesday
-      time: "6:00 PM - 9:00 PM",
-      description: "Casual chess meetup for players of all levels. Bring your own board or use ours. Coached sessions available.",
-      image: chessImage,
+      title: "Chess Night",
+      date: "Monthly",
+      formattedDate: "TBD",
+      time: "Evening",
+      description: "Join us for a relaxed chess meetup monthly—open to all levels. Bring a friend or play with someone new. Coffee specials for all participants.",
       category: "chess",
-      price: "Free",
-      ticketsLeft: "Unlimited",
-      recurring: true,
-      recurringDay: 2 // Tuesday (0 = Sunday, 1 = Monday, etc.)
+      price: "$10.00",
+      ticketsLeft: 20,
+      recurring: false
     },
     {
       id: 2,
-      title: "World Cup Watch Party",
-      date: "June 20, 2023",
-      formattedDate: "2023-06-20",
-      time: "3:00 PM - 5:30 PM",
-      description: "Watch the big game on our large screens! Special menu featuring international dishes and drink specials.",
-      image: soccerImage,
+      title: "Soccer Match Viewing",
+      date: "Match Days",
+      formattedDate: "TBD",
+      time: "Match Time",
+      description: "Catch live soccer games on our screens with specialty drinks and café snacks during match time at discounted price. $5 cover charge includes access to the viewing.",
       category: "soccer",
       price: "$5.00",
-      ticketsLeft: 24,
+      ticketsLeft: 30,
       recurring: false
     },
     {
       id: 3,
-      title: "Premier League Finals",
-      date: "June 24, 2023",
-      formattedDate: "2023-06-24",
-      time: "2:00 PM - 4:30 PM",
-      description: "Don't miss the excitement of the finals! Watch with fellow fans while enjoying our game day menu.",
-      image: soccerImage,
-      category: "soccer",
-      price: "$5.00",
-      ticketsLeft: 18,
-      recurring: false
-    },
-    {
-      id: 4,
-      title: "Quizzo Night: Coffee Edition",
-      date: "Every Thursday",
-      formattedDate: "2023-06-08", // Example Thursday
-      time: "7:00 PM - 9:00 PM",
-      description: "Test your knowledge on coffee, food, and general trivia! Teams of up to 5 people. Weekly prizes!",
-      image: quizzoImage,
-      category: "quizzo",
-      price: "Free",
-      ticketsLeft: "Unlimited",
-      recurring: true,
-      recurringDay: 4 // Thursday (0 = Sunday, 1 = Monday, etc.)
-    },
-    {
-      id: 5,
-      title: "Monthly Chess Tournament",
-      date: "July 8, 2023",
-      formattedDate: "2023-07-08",
-      time: "1:00 PM - 6:00 PM",
-      description: "Competitive chess tournament with timed matches. Entry fee includes one free beverage of your choice.",
-      image: chessImage,
-      category: "chess",
-      price: "$10.00",
-      ticketsLeft: 16,
-      recurring: false
-    },
-    {
-      id: 6,
-      title: "Themed Quizzo: Movies & TV",
-      date: "June 22, 2023",
-      formattedDate: "2023-06-22",
-      time: "7:00 PM - 9:30 PM",
-      description: "Special themed trivia night focusing on movies and TV shows. Costume wearing encouraged!",
-      image: quizzoImage,
-      category: "quizzo",
-      price: "$2.00",
-      ticketsLeft: 30,
+      title: "Art & Sip",
+      date: "TBD",
+      formattedDate: "TBD",
+      time: "Evening",
+      description: "Enjoy a creative break with simple art activities, your favorite Piquant specialty drinks, and a charcuterie board. Ticket includes art supply, one specialty drink, seating, and set up.",
+      category: "art",
+      price: "$20.00",
+      ticketsLeft: 15,
       recurring: false
     },
   ];
@@ -266,7 +211,7 @@ const Events = () => {
       <div className="events-hero">
         <div className="events-hero-content">
           <h1>Upcoming Events</h1>
-          <p>Join us for exciting events, competitions, and gatherings</p>
+          <p>Join us for chess nights, soccer viewing, and creative experiences</p>
         </div>
       </div>
 
@@ -281,41 +226,43 @@ const Events = () => {
           <div className="featured-events-grid">
             {featuredEvents.map((event) => (
               <div className="featured-event" key={event.id}>
-                <div className="featured-event-image">
-                  <img src={event.image} alt={event.title} />
-                  <div className="event-date-badge">
-                    <span className="event-month">{formatDateForBadge(event.date).month}</span>
-                    <span className="event-day">{formatDateForBadge(event.date).day}</span>
-                  </div>
-                  <div className="event-category-tag">{event.category}</div>
+                <div className="event-icon-wrapper">
+                  {event.category === 'chess' && (
+                    <svg className="event-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19,22H5V20H19V22M17,10C15.58,10 14.26,10.77 13.55,12H13V7H16V5H13V2H11V5H8V7H11V12H10.45C9.74,10.77 8.42,10 7,10C4.79,10 3,11.79 3,14C3,16.21 4.79,18 7,18H17C19.21,18 21,16.21 21,14C21,11.79 19.21,10 17,10Z"/>
+                    </svg>
+                  )}
+                  {event.category === 'soccer' && (
+                    <svg className="event-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,3C7.03,3 3,7.03 3,12C3,16.97 7.03,21 12,21C16.97,21 21,16.97 21,12C21,7.03 16.97,3 12,3M12,4.44L14.47,7.47L12,8.5L9.53,7.47L12,4.44M5.83,8.23L9.3,8.94L9.14,12.5L6.17,10.77L5.83,8.23M18.17,8.23L17.83,10.77L14.86,12.5L14.7,8.94L18.17,8.23M8.5,14.36L11,14.73V18.56L8.5,14.36M15.5,14.36L13,18.56V14.73L15.5,14.36M10.24,18.17L10.5,15.5H13.5L13.76,18.17L12,19.56L10.24,18.17Z"/>
+                    </svg>
+                  )}
+                  {event.category === 'art' && (
+                    <svg className="event-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2C17.5,2 22,6 22,11A6,6 0 0,1 16,17H14.2C13.9,17 13.7,17.2 13.7,17.5C13.7,17.6 13.8,17.7 13.8,17.8C14.2,18.3 14.4,18.9 14.4,19.5C14.5,20.9 13.4,22 12,22M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C12.3,20 12.5,19.8 12.5,19.5C12.5,19.3 12.4,19.2 12.4,19.1C12,18.6 11.8,18.1 11.8,17.5C11.8,16.1 12.9,15 14.3,15H16A4,4 0 0,0 20,11C20,7.1 16.4,4 12,4M6.5,10C7.3,10 8,10.7 8,11.5C8,12.3 7.3,13 6.5,13C5.7,13 5,12.3 5,11.5C5,10.7 5.7,10 6.5,10M9.5,6C10.3,6 11,6.7 11,7.5C11,8.3 10.3,9 9.5,9C8.7,9 8,8.3 8,7.5C8,6.7 8.7,6 9.5,6M14.5,6C15.3,6 16,6.7 16,7.5C16,8.3 15.3,9 14.5,9C13.7,9 13,8.3 13,7.5C13,6.7 13.7,6 14.5,6M17.5,10C18.3,10 19,10.7 19,11.5C19,12.3 18.3,13 17.5,13C16.7,13 16,12.3 16,11.5C16,10.7 16.7,10 17.5,10Z"/>
+                    </svg>
+                  )}
                 </div>
                 <div className="featured-event-content">
+                  <span className="event-category-tag">{event.category}</span>
                   <h3>{event.title}</h3>
-                  <div className="event-meta">
-                    <div className="event-time">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#471f3a">
-                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 13H11V7H13V11H17V13Z"/>
-                      </svg>
-                      <span>{event.date}, {event.time}</span>
-                    </div>
-                    <div className="event-tickets">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#471f3a">
-                        <path d="M22 10V6C22 4.89 21.1 4 20 4H4C2.9 4 2 4.89 2 6V10C3.11 10 4 10.9 4 12S3.11 14 2 14V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V14C20.9 14 20 13.1 20 12S20.9 10 22 10ZM20 8.54C18.81 9.23 18 10.53 18 12S18.81 14.77 20 15.46V18H4V15.46C5.19 14.77 6 13.47 6 12C6 10.5 5.2 9.23 4 8.54L4 6H20V8.54Z"/>
-                      </svg>
-                      <span>{event.ticketsLeft} Tickets Left</span>
-                    </div>
-                  </div>
                   <p className="event-description">{event.description}</p>
-                  <div className="event-footer">
-                    <span className="event-price">{event.price}</span>
-                    <button className="btn-buy-ticket">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 21H20V8H4V21ZM14 15H18V11H14V15ZM6 15H12V17H6V15ZM6 11H12V13H6V11Z"/>
-                        <path d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2 6.89 2 8V21C2 22.11 2.89 23 4 23H20C21.11 23 22 22.11 22 21V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4ZM20 21H4V8H20V21Z"/>
-                      </svg>
-                      Buy Tickets
-                    </button>
+                  <div className="event-meta">
+                    <div className="event-detail">
+                      <span className="event-detail-label">Date</span>
+                      <span className="event-detail-value">{event.date}</span>
+                    </div>
+                    <div className="event-detail">
+                      <span className="event-detail-label">Price</span>
+                      <span className="event-detail-value">{event.price}</span>
+                    </div>
                   </div>
+                  <button className="btn-buy-ticket">
+                    Buy Tickets
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12,4L10.59,5.41L16.17,11H4V13H16.17L10.59,18.59L12,20L20,12L12,4Z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             ))}
@@ -346,10 +293,10 @@ const Events = () => {
               Soccer
             </button>
             <button 
-              className={`filter-button ${activeFilter === 'quizzo' ? 'active' : ''}`}
-              onClick={() => handleFilterClick('quizzo')}
+              className={`filter-button ${activeFilter === 'art' ? 'active' : ''}`}
+              onClick={() => handleFilterClick('art')}
             >
-              Quizzo
+              Art & Sip
             </button>
           </div>
         </div>
@@ -415,25 +362,30 @@ const Events = () => {
               <div className="selected-events-list">
                 {selectedEvents.map(event => (
                   <div className="calendar-event-card" key={event.id}>
-                    <div className="calendar-event-image">
-                      <img src={event.image} alt={event.title} />
-                      <div className="calendar-event-category">{event.category}</div>
+                    <div className="calendar-event-icon">
+                      {event.category === 'chess' && (
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19,22H5V20H19V22M17,10C15.58,10 14.26,10.77 13.55,12H13V7H16V5H13V2H11V5H8V7H11V12H10.45C9.74,10.77 8.42,10 7,10C4.79,10 3,11.79 3,14C3,16.21 4.79,18 7,18H17C19.21,18 21,16.21 21,14C21,11.79 19.21,10 17,10Z"/>
+                        </svg>
+                      )}
+                      {event.category === 'soccer' && (
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,3C7.03,3 3,7.03 3,12C3,16.97 7.03,21 12,21C16.97,21 21,16.97 21,12C21,7.03 16.97,3 12,3M12,4.44L14.47,7.47L12,8.5L9.53,7.47L12,4.44M5.83,8.23L9.3,8.94L9.14,12.5L6.17,10.77L5.83,8.23M18.17,8.23L17.83,10.77L14.86,12.5L14.7,8.94L18.17,8.23M8.5,14.36L11,14.73V18.56L8.5,14.36M15.5,14.36L13,18.56V14.73L15.5,14.36M10.24,18.17L10.5,15.5H13.5L13.76,18.17L12,19.56L10.24,18.17Z"/>
+                        </svg>
+                      )}
+                      {event.category === 'art' && (
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2C17.5,2 22,6 22,11A6,6 0 0,1 16,17H14.2C13.9,17 13.7,17.2 13.7,17.5C13.7,17.6 13.8,17.7 13.8,17.8C14.2,18.3 14.4,18.9 14.4,19.5C14.5,20.9 13.4,22 12,22M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C12.3,20 12.5,19.8 12.5,19.5C12.5,19.3 12.4,19.2 12.4,19.1C12,18.6 11.8,18.1 11.8,17.5C11.8,16.1 12.9,15 14.3,15H16A4,4 0 0,0 20,11C20,7.1 16.4,4 12,4M6.5,10C7.3,10 8,10.7 8,11.5C8,12.3 7.3,13 6.5,13C5.7,13 5,12.3 5,11.5C5,10.7 5.7,10 6.5,10M9.5,6C10.3,6 11,6.7 11,7.5C11,8.3 10.3,9 9.5,9C8.7,9 8,8.3 8,7.5C8,6.7 8.7,6 9.5,6M14.5,6C15.3,6 16,6.7 16,7.5C16,8.3 15.3,9 14.5,9C13.7,9 13,8.3 13,7.5C13,6.7 13.7,6 14.5,6M17.5,10C18.3,10 19,10.7 19,11.5C19,12.3 18.3,13 17.5,13C16.7,13 16,12.3 16,11.5C16,10.7 16.7,10 17.5,10Z"/>
+                        </svg>
+                      )}
                     </div>
                     <div className="calendar-event-content">
+                      <span className="calendar-event-category">{event.category}</span>
                       <h4>{event.title}</h4>
-                      <div className="calendar-event-time">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#471f3a">
-                          <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 13H11V7H13V11H17V13Z"/>
-                        </svg>
-                        <span>{event.time}</span>
-                      </div>
                       <p className="calendar-event-description">{event.description}</p>
                       <div className="calendar-event-footer">
                         <span className="calendar-event-price">{event.price}</span>
-                        <div className="calendar-event-tickets-buy">
-                          <span className="calendar-event-tickets">{event.ticketsLeft} tickets left</span>
-                          <button className="btn-sm-buy-ticket">Buy Tickets</button>
-                        </div>
+                        <button className="btn-sm-buy-ticket">Buy Tickets</button>
                       </div>
                     </div>
                   </div>

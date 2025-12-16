@@ -9,7 +9,7 @@ const testimonials = [
   {
     text: "Piquant Café has been my second home for years. The staff knows me by name, remembers my order, and the quality is consistently fantastic. This place embodies what a local café should be.",
     author: "James L.",
-    role: "Regular Since 2012"
+    role: "Long-time Regular"
   },
   {
     text: "I've tried many cafés, but Piquant stands out with their attention to detail and quality ingredients. The pastries are to die for, and their commitment to sustainability makes me feel good about being a customer.",
@@ -86,7 +86,7 @@ const About = () => {
             <div className="journey-text">
               <h2 className="section-title">How We Started</h2>
               <p>
-                Piquant Café was born in 2010 from a simple passion for exceptional coffee and a desire to create a welcoming community space. Our founders, Sarah and Michael, met in culinary school and shared a vision of a café that would serve not just outstanding beverages, but also become a neighborhood gathering place.
+                Piquant Café was born from a simple passion for exceptional coffee and a desire to create a welcoming community space. We set out with a vision of a café that would serve not just outstanding beverages, but also become a neighborhood gathering place.
               </p>
               <p>
                 What began as a small corner shop with just a few tables has grown into a beloved local institution, but our core values remain unchanged: quality ingredients, expert preparation, genuine hospitality, and a commitment to sustainability.

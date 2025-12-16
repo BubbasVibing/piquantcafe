@@ -119,19 +119,21 @@ const Menu = () => {
                     <div className="menu-card-header">
                       <h3 className="menu-card-name">{item.name}</h3>
                       <span className="menu-card-price">{item.price}</span>
-                  </div>
+                    </div>
                     <p className="menu-card-description">{item.description}</p>
                   </div>
-                  <button 
-                    className="menu-card-order"
-                    onClick={() => handleOrder(item)}
-                    aria-label={`Order ${item.name}`}
-                  >
-                    <span>Order</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <div className="menu-card-footer">
+                    <button 
+                      className="menu-card-order"
+                      onClick={() => handleOrder(item)}
+                      aria-label={`Order ${item.name}`}
+                    >
+                      Order
+                      <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
                       </svg>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

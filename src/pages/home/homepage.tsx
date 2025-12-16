@@ -134,7 +134,7 @@ const Homepage = () => {
             <div className="about-text">
               <h2 className="section-title">Our Story</h2>
               <p>
-                Founded in 2010, Piquant Café began with a simple mission: to create a 
+                Piquant Café began with a simple mission: to create a 
                 welcoming space where people could enjoy exceptional coffee and food.
               </p>
               <p>
