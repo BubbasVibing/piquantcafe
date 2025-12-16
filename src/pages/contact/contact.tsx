@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './contact.css';
 
 // Import images
-import contactImage from '../../assets/contact-image.jpg';
 import secondInteriorImage from '../../assets/secondinteriorpicture.jpg';
 
 const Contact = () => {

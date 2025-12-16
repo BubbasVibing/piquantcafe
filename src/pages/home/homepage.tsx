@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import './homepage.css';
 
 // Import images
-import coffeeImage from '../../assets/menu-hero.jpg';
-import foodImage from '../../assets/contact-image.jpg';
 import interiorImage from '../../assets/interiorpiquantphoto.jpg';
 import heroBackground from '../../assets/herosectionpiquant.png';
 
