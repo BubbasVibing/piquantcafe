@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './homepage.css';
 
 // Import images
-import interiorImage from '../../assets/interiorpiquantphoto.jpg';
+import interiorImage from '../../assets/Piquantcafe.jpg';
 import heroBackground from '../../assets/herosectionpiquant.png';
 
 // Testimonial data

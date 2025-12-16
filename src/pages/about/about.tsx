@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './about.css';
 
 // Import images
-import foundersImage from '../../assets/founders.jpg';
+import foundersImage from '../../assets/Piquantcafe.jpg';
 
 // Testimonial data
 const testimonials = [
