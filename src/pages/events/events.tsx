@@ -128,16 +128,12 @@ const Events = () => {
   useEffect(() => {
     if (!selectedDate) return;
     
-    const day = selectedDate.getDay(); // day of week
     const formattedSelectedDate = `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
     
-    // Filter events for the selected date or recurring events for the day of week
+    // Filter events for the selected date
     const dayEvents = events.filter(event => {
       // Match events on specific date
       if (event.formattedDate === formattedSelectedDate) return true;
-      
-      // Match recurring events on the day of week
-      if (event.recurring && event.recurringDay === day) return true;
       
       return false;
     });
@@ -163,35 +159,14 @@ const Events = () => {
 
   // Function to check if a day has events
   const hasEvents = (date: Date) => {
-    const day = date.getDay(); // day of week
     const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     
     return events.some(event => {
       // Match events on specific date
       if (event.formattedDate === formattedDate && (activeFilter === 'all' || event.category === activeFilter)) return true;
       
-      // Match recurring events on the day of week
-      if (event.recurring && event.recurringDay === day && (activeFilter === 'all' || event.category === activeFilter)) return true;
-      
       return false;
     });
-  };
-
-  // Function to format date for the badge
-  const formatDateForBadge = (dateStr: string) => {
-    if (dateStr.startsWith("Every")) {
-      return { month: "WEEKLY", day: "" };
-    }
-    
-    try {
-      const parts = dateStr.split(" ");
-      return {
-        month: parts[0].substring(0, 3).toUpperCase(),
-        day: parts[1].replace(",", "")
-      };
-    } catch (e) {
-      return { month: "TBD", day: "" };
-    }
   };
 
   // Get month name and year
