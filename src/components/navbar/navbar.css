@@ -21,12 +21,16 @@
 }
 
 .navbar-logo {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
+}
+
+.navbar-logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
 }
 
 .menu-icon {

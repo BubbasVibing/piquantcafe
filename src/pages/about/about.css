@@ -268,9 +268,9 @@
 
 .team-role {
   color: #f4c38b;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 15px;
-  font-style: italic;
+  font-style: normal;
 }
 
 .team-bio {
