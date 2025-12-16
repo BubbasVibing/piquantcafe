@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/navbar/navbar'
 import Footer from './components/footer/footer'
 import Homepage from './pages/home/homepage'
@@ -19,7 +19,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Add more routes as needed */}
+          {/* Catch-all route - redirects unknown paths to homepage */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />

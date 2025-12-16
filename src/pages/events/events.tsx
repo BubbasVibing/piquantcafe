@@ -204,7 +204,7 @@ const Events = () => {
                 <div className="event-icon-wrapper">
                   {event.category === 'chess' && (
                     <svg className="event-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19,22H5V20H19V22M17,10C15.58,10 14.26,10.77 13.55,12H13V7H16V5H13V2H11V5H8V7H11V12H10.45C9.74,10.77 8.42,10 7,10C4.79,10 3,11.79 3,14C3,16.21 4.79,18 7,18H17C19.21,18 21,16.21 21,14C21,11.79 19.21,10 17,10Z"/>
+                      <path d="M19,22H5V20H19V22M17,18H7V16L10.5,14H8V12H9V10H7V8H9V6L8,4H10L11,6H13L14,4H16L15,6H15V8H17V10H15V12H16V14H13.5L17,16V18M12,6A1,1 0 0,0 11,7A1,1 0 0,0 12,8A1,1 0 0,0 13,7A1,1 0 0,0 12,6Z"/>
                     </svg>
                   )}
                   {event.category === 'soccer' && (
@@ -340,7 +340,7 @@ const Events = () => {
                     <div className="calendar-event-icon">
                       {event.category === 'chess' && (
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19,22H5V20H19V22M17,10C15.58,10 14.26,10.77 13.55,12H13V7H16V5H13V2H11V5H8V7H11V12H10.45C9.74,10.77 8.42,10 7,10C4.79,10 3,11.79 3,14C3,16.21 4.79,18 7,18H17C19.21,18 21,16.21 21,14C21,11.79 19.21,10 17,10Z"/>
+                          <path d="M19,22H5V20H19V22M17,18H7V16L10.5,14H8V12H9V10H7V8H9V6L8,4H10L11,6H13L14,4H16L15,6H15V8H17V10H15V12H16V14H13.5L17,16V18M12,6A1,1 0 0,0 11,7A1,1 0 0,0 12,8A1,1 0 0,0 13,7A1,1 0 0,0 12,6Z"/>
                         </svg>
                       )}
                       {event.category === 'soccer' && (
