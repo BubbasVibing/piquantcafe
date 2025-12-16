@@ -38,7 +38,7 @@ const Events = () => {
       time: "Evening Event",
       description: "Enjoy a creative break with simple art activities, your favorite Piquant specialty drinks, and a charcuterie board. Ticket includes art supply, one specialty drink, seating, and set up.",
       category: "art",
-      price: "$20.00"
+      price: "$40.00"
     }
   ];
 
@@ -76,7 +76,7 @@ const Events = () => {
       time: "Evening",
       description: "Enjoy a creative break with simple art activities, your favorite Piquant specialty drinks, and a charcuterie board. Ticket includes art supply, one specialty drink, seating, and set up.",
       category: "art",
-      price: "$20.00",
+      price: "$40.00",
       ticketsLeft: 15,
       recurring: false
     },
