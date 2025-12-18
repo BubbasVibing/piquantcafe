@@ -86,10 +86,10 @@ const About = () => {
             <div className="journey-text">
               <h2 className="section-title">How We Started</h2>
               <p>
-                Piquant Café was born from a simple passion for exceptional coffee and a desire to create a welcoming community space. We set out with a vision of a café that would serve not just outstanding beverages, but also become a neighborhood gathering place.
+                Piquant Café began with a simple focus: well-prepared food and thoughtfully crafted drinks. Our menu is built around quality ingredients, balanced flavors, and dishes made with care—from morning coffee and baked goods to satisfying café favorites served throughout the day.
               </p>
               <p>
-                What began as a small corner shop with just a few tables has grown into a beloved local institution, but our core values remain unchanged: quality ingredients, expert preparation, genuine hospitality, and a commitment to sustainability.
+                We aim for food that feels familiar yet refined, prepared with consistency and attention to detail. Paired with warm, welcoming service, Piquant Café offers a comfortable space to sit, connect, get some work done, or enjoy a good meal at your own pace.
               </p>
             </div>
             <div className="journey-image">

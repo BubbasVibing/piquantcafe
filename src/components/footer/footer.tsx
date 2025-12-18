@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer-brand">
             <img src="/piquantcafelogo1.png" alt="Piquant Café" className="footer-logo-img" />
             <p className="footer-tagline">
-              Extraordinary culinary artistry for life's most meaningful celebrations
+              Well-crafted food and drinks, made to be enjoyed in a welcoming space.
             </p>
             <a 
               href="https://piquant-cafe.cloveronline.com/menu/all" 
